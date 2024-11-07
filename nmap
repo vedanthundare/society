@@ -1,0 +1,15 @@
+sudo apt-get install nmap
+nmap www.geeksforgeeks.org
+nmap 192.168.3.106
+nmap -p T:80 192.168.3.106
+nmap -u U:53 192.168.3.106
+nmap -p U:53 192.168.3.106
+nmap -p 80-110 192.168.3.106 range
+nmap -v -A 192.168.3.106
+nmap -sN 192.168.3.106
+nmap -sT 192.168.3.106
+sudo nmap -sN 192.168.3.106
+sudo nmap -sT 192.168.3.106
+sudo nmap -sS 192.168.3.106
+sudo nmap -sX 192.168.3.106
+sudo nmap -sU 192.168.3.106
