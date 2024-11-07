@@ -1,0 +1,12 @@
+(In terminal)
+sudo apt update
+sudo apt install vsftpd
+sudo systemctl start vsftpd
+sudo nano /etc/vsftpd.conf
+(change the write mode to on)
+sudo systemctl restart vsftpd
+sudo ufw allow ftp
+sudo useradd -m testuser
+sudo passwd testuser
+sudo ftp (whatever is after @)
+put sanket.txt
