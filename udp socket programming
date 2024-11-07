@@ -1,0 +1,50 @@
+import socket
+
+
+server_socket=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+print('UDP Server Created')
+
+
+port = 12345
+
+
+server_socket.bind(('',port))
+print(f'Socket binded to port {port}')
+
+
+try:
+    while True:
+        print('Waiting for connection')
+        data, addr = server_socket.recvfrom(1024)
+        print(f'Message Recieved: {data.decode()}from {addr}')
+
+
+        message = 'Thank you for connecting'
+        server_socket.sendto(message.encode(),addr)
+
+
+finally:
+    server_socket.close()
+
+
+//client
+
+import socket
+
+
+client_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+server_address = ('localhost',12345)
+
+
+try:
+    message = "Hello Server!\n"
+    client_socket.sendto(message.encode(),server_address)
+    print(f"Sent Message: {message}")
+
+
+    data,_= client_socket.recvfrom(1024)
+    print(f"Recieved from server: {data.decode()}")
+
+
+finally:
+    client_socket.close()
