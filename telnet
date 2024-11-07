@@ -1,0 +1,10 @@
+(In terminal)
+sudo apt install telnetd
+sudo systemctl status inetd
+sudo systemctl start inetd
+sudo systemctl status inetd
+ifconfig (copy IP)
+telnet [IP]
+sudo ufw enable
+sudo ufw allow 23
+telnet [IP] [Port(23)]
