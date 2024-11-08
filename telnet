@@ -8,3 +8,28 @@ telnet [IP]
 sudo ufw enable
 sudo ufw allow 23
 telnet [IP] [Port(23)]
+
+or
+
+ sudo apt update
+ sudo apt install telnetd xinetd
+ sudo nano /etc/xinetd.d/telnet
+service telnet
+{
+ disable = no
+ flags = REUSE
+ socket_type = stream
+ wait = no
+ user = root
+ server = /usr/sbin/in.telnetd
+ log_on_failure += USERID
+}
+ sudo systemctl restart xinetd
+ sudo systemctl status xinetd\
+ sudo ufw allow 23/tcp
+ telnet server-ip-address
+ date
+ ls
+ uptime
+ exit
+
