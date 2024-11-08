@@ -1,0 +1,53 @@
+Add PC, Wireless Router, Laptop, Cable Modem, Cloud (Internet), Server
+ Rename all components
+ Wire connection: PC to Wireless Router: FastEthernet0 – Ethernet1
+ Wire Connection: Wireless Router to Cable Modem: Internet – Port1
+ Wireless Router - Setup:
+1. Change subnet mask: 255.255.255.0
+2. Maximum number of users: 50
+3. Static DNS 1: 208.67.220.220
+4. Save Settings
+ Wireless Router – Wireless:
+1. SSID: HomeNetwork
+2. Save Settings
+ Laptop – Physical
+1. Power OFF
+2. Replace with WPC300N
+3. Power ON
+ Laptop – Desktop – PC Wireless
+1. Connect Tab
+2. Site Information: connect
+ Laptop – Desktop – Command Prompt
+1. ipconfig /all
+ PC – Desktop – IP Configuration
+1. Select DHCP
+ PC – Desktop – Command Prompt
+1. ipconfig /all
+ Blue Wire Connection: Cable Modem to Cloud: Port0 – Coaxial7
+ Wire Connection: Cloud to Server: Ethernet6 – FastEthernet0
+ Cloud – Config
+1. FastEthernet6 – Provider Network: Cable
+2. Cable – Click Add
+ Server – Services
+1. DHCP – Pool Name: DHCPpool
+2. DHCP – Default Gateway: 208.67.220.220
+3. DHCP – DNS Server: 208.67.220.220
+4. DHCP – Start IP Address: 208.67.220.1
+5. DHCP – Subnet Mask: 255.255.255.0
+6. DHCP – Max number of users: 50
+7. DHCP – Service: On
+8. DHCP – Click Add
+9. DNS – DNS Service: ON
+10. DNS – Name: Cisco.com
+11. DNS – Address: 208.67.220.220
+12. DNS – Click Add
+ Server – Config
+1. Gateway: 208.67.220.1
+2. DNS Server: 208.67.220.220
+3. FastEthernet0 – IP Address: 208.67.220.220
+4. FastEthernet0 – Subnet Mask: 255.255.255.0
+ PC – Desktop – Command Prompt
+1. ipconfig /release
+2. ipconfig /renew
+3. ping cisco.com
+ Save As
