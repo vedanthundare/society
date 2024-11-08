@@ -16,3 +16,13 @@ sudo useradd -m testuser
 sudo passwd testuser
 sudo ftp (whatever is after @)
 put sanket.txt
+
+
+get
+ mget
+ put
+ mput
+ mkdir
+ rmdir
+ delete
+ mdelete
