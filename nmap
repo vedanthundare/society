@@ -13,3 +13,29 @@ sudo nmap -sT 192.168.3.106
 sudo nmap -sS 192.168.3.106
 sudo nmap -sX 192.168.3.106
 sudo nmap -sU 192.168.3.106
+
+
+or 
+
+Basic Syntax: nmap [options] [target]
+ Installing Nmap: sudo apt-get install nmap
+ Scan using Hostname: nmap www.geeksforgeeks.org
+ Scan using IP Address: nmap 172.217.27.174
+ To scan using “-v” option: nmap -v www.geeksforgeeks.org
+ To scan multiple hosts: nmap 103.76.228.244 157.240.198.35 172.217.27.174
+ To scan the whole subnet: nmap 103.76.228.*
+ To scan specific range of IP address: nmap 192.168.29.1-20
+ To scan to detect firewall settings: sudo nmap -sA 103.76.228.244
+ To identify Hostnames: sudo nmap -sL 103.76.228.244
+ To scan from a file: nmap -iL input.txt
+ To get some help: nmap -h
+ Ping Scan (-sn): nmap -sn 192.168.1.0/24
+ Port Scan (-p): nmap -p 1-1000 192.168.1.1
+ Service Version Detection (-sV): nmap -sV 192.168.1.1
+ OS Detection (-O): nmap -O 192.168.1.1
+ Aggressive Scan (-A): nmap -A 192.168.1.1
+ UDP Scan (-sU): nmap -sU 192.168.1.1
+ SYN Scan (-sS): nmap -sS 192.168.1.1
+ FIN, Xmas, and Null Scans (-sF, -sX, -sN): nmap -sX 192.168.1.1
+ Decoy Scan (-D): nmap -D RND:10 192.168.1.1
+
