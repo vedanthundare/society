@@ -7,11 +7,17 @@ o Set anonymous_enable=NO
 o Set local_enable=YES
 o Set write_enable=YES
 o Uncomment chroot_local_user=YES
+
+paste down
+1 user_sub_token=$USER
+local root=/home/$USER/ftp
 o pasv_min_port=10000
 o pasv_max_port=10100
+
  sudo systemctl restart vsftpd
  sudo ufw allow ftp
 o sudo ufw allow 10000:10100/tcp
+
 sudo useradd -m testuser
 sudo passwd testuser
 sudo ftp (whatever is after @)
